@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing Data</Datag></title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header class="title">Recipe Book</header>
+
+<!--Hidden input fields are a mechanism that software developers use to put information about the data into the DOM without adding useless, visual noise for the user. It's an input field that you can get or set the value of, but the user doesn't see it. 
+    Here's what it looks like. You would add it as the first field in the form. --->
+<section id="recipeForm">
+    <form>
+        <section id="recipeForm">
+            <form>
+                <input type="hidden" id="recipeId" value="" />
+                ...
+            </form>    
+        
+        </section>
+        <fieldset class="fieldset">
+            <label for="recipeTitle">Title</label>
+            <input type="text" name="recipeTitle" id="recipeTitle">
+        </fieldset>
+        <fieldset class="fieldset">
+            <label for="recipeInstructions">Instructions</label>
+            <textarea type="date" name="recipeInstructions" id="recipeInstructions"></textarea>
+        </fieldset>
+    </form>
+    <button id="saveRecipe">Save Recipe</button>
+</section>
+    <script src="main.js"></script>
+</body>
+</html>
