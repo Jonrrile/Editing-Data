@@ -2,7 +2,17 @@
 //Just like when you implemented the delete functionality, you needed the recipe id added to the end of the id attribute of the delete button. 
 //The edit button needs the same thing so that you can capture which recipe to edit.
 
+import apiActions from "./api.js"
+import events from "./events.js"
+import render from "./dom.js"
 
+// Invoke the method that attaches the event listener
+events.registerDeleteListener()
+
+// Get all recipes from API and render them in the DOM
+apiActions.getAllRecipes().then(render)
+
+/*
 const createRecipeCard = recipe => `
     <section class="recipe--${recipe.id}">
         <header class="recipe__title">
@@ -31,10 +41,10 @@ recipeList.addEventListener("click", event => {
             This function will get the recipe from the API
             and populate the form fields (see below)
         */
-        updateFormFields(recipeIdToEdit)
-    }
-})
-
+        //updateFormFields(recipeIdToEdit)
+    //}
+//})
+/*
 //Once you have extracted the id of the recipe to be editing, send a GET request to your API to get the current state of that recipe.
 //Then, represent that current state in your user interface by setting the value of the appropriate input fields in your form.
 
@@ -53,6 +63,7 @@ const updateFormFields = recipeId => {
                 an editing form that represents the current
                 state of the resource.
             */
+           /*
             hiddenRecipeId.value = recipe.id // Hidden value. User no see. 🙈
             recipeTitleInput.value = recipe.title
             recipeInstructionsInput.value = recipe.instructions
@@ -61,7 +72,7 @@ const updateFormFields = recipeId => {
 
 //Since you are simply updating your existing form with values for an edit operation, you application needs to know that when the user clicks the "Save" button, information should not be created in the API, but updated.
 
-
+/*
 saveButton.addEventListener("click", event => {
     const hiddenRecipeId = document.querySelector("#recipeId")
 
@@ -96,7 +107,7 @@ const editRecipe = id => {
             application is back to the state of creating instead
             of editing
         */
-        document.querySelector("#recipeId").value = ""
-    })
+    //    document.querySelector("#recipeId").value = ""
+    //})
 
-}
+//}
